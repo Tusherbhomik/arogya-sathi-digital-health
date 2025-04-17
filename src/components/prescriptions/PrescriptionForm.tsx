@@ -63,7 +63,13 @@ export function PrescriptionForm({ onSubmit, patient }: PrescriptionFormProps) {
       hospitalName: "City Medical Center", // This would come from doctor profile in a real app
       date: new Date(),
       expiryDate: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000), // 30 days from now
-      medicines: [{ name: "", dosage: "", duration: "", frequency: "", notes: "" }],
+      medicines: [{ 
+        name: "", 
+        dosage: "", 
+        duration: "", 
+        frequency: "", 
+        notes: "" 
+      }] as Medicine[], // Explicitly type as Medicine[] to match the required type
       instructions: "",
     },
   });
